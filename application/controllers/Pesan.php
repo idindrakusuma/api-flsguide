@@ -9,18 +9,27 @@ class Pesan extends REST_Controller {
         parent::__construct($config);
     }
 
-	function index_get(){
-		$id_pesan = $this->get('id_pesan');
+	function info_get(){
+		$id_pesan = $this->get('id');
 		if ($id_pesan == '') {
-			$users = $this->db->get('pesan')->result();
+			$info = $this->db->get('pesan')->result();
 		}
 
 		else{
-			$this->db->where('id_pesan', $email);
-			$users = $this->db->get('pesan')->result();
-		}
+			$this->db->where('id_pesan', $id_pesan);
+			$info = $this->db->get('pesan')->result();
 
-		$this->response($users, 200);
+			if ($info== NULL) {
+				// jika user tidak ditemukan
+                $this->response([
+                    'status' => FALSE,
+                    'message' => 'data tidak ditemukan'
+                ], REST_Controller::HTTP_NOT_FOUND); // NOT_FOUND (404) being the HTTP response code
+			}
+		}
+		//jika Ada
+		$this->response($info, 200);
+		 
 	}
 
 }

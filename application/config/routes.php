@@ -52,6 +52,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'guide';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = TRUE;
+$route['main/users/(:num)'] = 'main/users/id/$1';
+$route['agenda/program/(:num)'] = 'agenda/program/id/$1';
+$route['pesan/info/(:num)'] = 'pesan/info/id/$1';
+//ROUTES API
+
 
 /*
 | -------------------------------------------------------------------------

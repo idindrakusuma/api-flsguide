@@ -9,18 +9,28 @@ class Agenda extends REST_Controller {
         parent::__construct($config);
     }
 
-	function index_get(){
-		$id_agenda = $this->get('id_agenda');
+	function program_get(){
+
+		$id_agenda = $this->get('id');
+		
 		if ($id_agenda == '') {
-			$users = $this->db->get('agenda')->result();
+			$program = $this->db->get('agenda')->result();
 		}
 
 		else{
-			$this->db->where('id_agenda', $email);
-			$users = $this->db->get('agenda')->result();
+			$this->db->where('id_agenda', $id_agenda);
+			$program = $this->db->get('agenda')->result();
+
+			if ($program== NULL) {
+				// jika user tidak ditemukan
+                $this->response([
+                    'status' => FALSE,
+                    'message' => 'data tidak ditemukan'
+                ], REST_Controller::HTTP_NOT_FOUND); // NOT_FOUND (404) being the HTTP response code
+			}
 		}
 
-		$this->response($users, 200);
+		$this->response($program, 200);
 	}
 
 }
