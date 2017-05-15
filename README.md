@@ -10,16 +10,16 @@ API (Application Program Interface) for FLS Guide adalah sebuah API yang digunak
 
 ## Cara Pemanggilan
 ### Mendapatkan informasi user
-`yourserver.com/main/users` untuk mendapatkan seluruh daftar users
-`yourserver.com/main/users/$id` untuk mendapatkan user dengan id tertentu
+- `yourserver.com/main/users` untuk mendapatkan seluruh daftar users
+- `yourserver.com/main/users/$id` untuk mendapatkan user dengan id tertentu
 
 ### Informasi Pesan
-`yourserver.com/pesan/info` untuk mendapatkan seluruh daftar informasi
-`yourserver.com/pesan/info/$id` untuk mendapatkan informasi tertentu
+- `yourserver.com/pesan/info` untuk mendapatkan seluruh daftar informasi
+- `yourserver.com/pesan/info/$id` untuk mendapatkan informasi tertentu
 
 ### Informasi Agenda
-`yourserver.com/agenda/program` untuk mendapatkan seluruh daftar kegiatan acara
-`yourserver.com/agenda/program/$id` untuk mendapatkan kegiatan acara tertentu
+- `yourserver.com/agenda/program` untuk mendapatkan seluruh daftar kegiatan acara
+- `yourserver.com/agenda/program/$id` untuk mendapatkan kegiatan acara tertentu
 
 
 ## Author
