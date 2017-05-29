@@ -12,12 +12,12 @@ class Pesan extends REST_Controller {
 	function info_get(){
 		$id_pesan = $this->get('id');
 		if ($id_pesan == '') {
-			$info = $this->db->get('pesan')->result();
+			$info = $this->db->get('info_guide')->result();
 		}
 
 		else{
-			$this->db->where('id_pesan', $id_pesan);
-			$info = $this->db->get('pesan')->result();
+			$this->db->where('info_id', $id_pesan);
+			$info = $this->db->get('info_guide')->result();
 
 			if ($info== NULL) {
 				// jika user tidak ditemukan

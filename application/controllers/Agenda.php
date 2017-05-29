@@ -18,7 +18,7 @@ class Agenda extends REST_Controller {
 		}
 
 		else{
-			$this->db->where('id_agenda', $id_agenda);
+			$this->db->where('agenda_id', $id_agenda);
 			$program = $this->db->get('agenda')->result();
 
 			if ($program== NULL) {
