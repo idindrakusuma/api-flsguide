@@ -37,8 +37,8 @@ CREATE TABLE `agenda` (
   `waktu_selesai` datetime NOT NULL,
   `lokasi` varchar(255) NOT NULL,
   `pakaian` varchar(300) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `created_at` timestamp NOT NULL CURRENT_TIMESTAMP,
+  `updated_at` timestamp NULL ON UPDATE CURRENT_TIMESTAMP,
   `user_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -61,8 +61,8 @@ CREATE TABLE `info_guide` (
   `judul_info` text NOT NULL,
   `deskripsi` text NOT NULL,
   `gambar` varchar(255) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `created_at` timestamp NOT NULL CURRENT_TIMESTAMP,
+  `updated_at` timestamp NULL ON UPDATE CURRENT_TIMESTAMP,
   `user_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
